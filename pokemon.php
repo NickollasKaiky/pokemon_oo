@@ -41,12 +41,13 @@ class Pokemon{
     }
 
     function aumentar_nivel(){
-       if($this->lv =! ($this->xp / 120)){
-        return $this->lv = $this->lv - ($this->xp / 120);
-       }
-       else{
-        return $this->lv;
-       }
+    
+     if($this->xp >= 120){
+        $this->lv++;
+        $this->xp -= 120;
+    }
+
+    return $this->lv;
     }
 
     function aumentar_pv(){
